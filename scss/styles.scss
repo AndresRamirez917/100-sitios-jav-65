@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+$font-stack:"Montserrat", sans-serif;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: $font-stack;
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 30px;
+    overflow: auto;
+}
+
+a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #000;
+}
+
+ul {
+    list-style: none;
+}
+
+.title {
+    font-size: 5rem;
+    font-weight: 400;
+    margin: 8rem 0 2rem 0;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+img {
+    max-width: 100%;
+}
+
+.flex {
+    display: flex;
+    flex: 1;
+    gap: 50px;
+}
+
+//iconos font awesome
+::placeholder {
+    font-family: "Font Awesome 5 Free"; font-weight: 600; content: "\f007";
+    text-align: right;
+}
+
+.btn {
+    display: block;
+    padding: 10px 20px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    background: #000;
+    border: none;
+    cursor: pointer;
+}
+
+.button-2 {
+    border-radius: 5px;
+}
+
+form {
+    .form-group {
+        margin-bottom: 1rem;
+    }
+    .form-control {
+        display: block;
+        width: 100%;
+        padding: 1rem;
+        border-radius: 4px; 
+    }
+    .button-2 {
+        width: 100%;
+    }
+}
+
+//mainheader
+#mainheader {
+    width: 80%;
+    margin: 0 auto;
+    .navbar {
+        .container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 400;
+        }
+        ul {
+            margin-top: 1rem;
+            display: flex;    
+        }   li {
+            display: inline-block;
+            margin-left: 1rem;
+        }
+        li:nth-child(5) {
+            margin-top: -.5rem;
+          }
+    }
+}
+
+//showcase
+#showcase {
+    width: 90%;
+    margin: 0 auto;
+.showcase-content {
+    p {
+        width: 100%;
+        font-size: 1.5rem;
+        text-align: left;
+        line-height: 30px;
+        margin-bottom: 2rem;
+    }
+    .btn {
+        width: fit-content;
+        margin-bottom: 2rem;
+    }
+    img {
+        width: 35%;
+    }
+    .show-cont-img {
+        margin-top: 1rem;
+        display: flex;
+        margin-bottom: 4rem;
+        img {
+            width: 50px;
+        }
+    }
+}
+}
+
+//games
+#games {
+   text-align: center;
+    margin: 0 auto;
+    h3 {
+        margin: 3rem 0;
+        font-weight: 400;
+    }
+        .games-flags {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            justify-items: center;
+            justify-self: center;
+            gap: 50px;
+
+            img {
+                width: 200px;
+                margin-bottom: 3rem;
+            }
+        }
+    hr {
+        width: 50%;
+        text-align: center;
+        margin: 0 auto;
+        display: block;
+       display: flex;
+    }
+}
+
+// Group
+#group {
+	padding: 80px 0;
+	.group-table {
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		width: 650px;
+		padding: 50px 20px;
+		margin: 0 auto;
+		table {
+			tr td {
+				color: #c4c4c4;
+				padding: 20px;
+			}
+			.group-table-country {
+				color: #000;
+			}
+		}
+	}
+} //End #group
+
+//about
+#about {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+    h2 {
+        margin-bottom: 2rem;
+    }
+    .about-row {
+        display: flex;
+        gap: 50px;
+        img {
+            width: 50%;
+        }
+    }
+}
+
+//contact
+#contact {
+    width: 60%;
+    margin: 0 auto;
+    h2 {
+        margin-bottom: 2rem;
+    }
+    form {
+      
+        .flex-box-1 {
+            flex: 1;
+        }
+    }
+}
+
+//qatar
+#qatar {
+    margin-top: 4rem;
+    a {
+       
+        width: fit-content;
+        display: block;
+        margin: 0 auto;
+        margin-top: 4rem;
+    }
+    
+}
+
+//footer
+#footer {
+    text-align: center;
+    padding: 3rem 0;
+}

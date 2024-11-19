@@ -1,0 +1,58 @@
+#mainheader .navbar .container {
+  display: block;
+}
+#mainheader .navbar .logo {
+  padding-top: 10px;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+}
+#mainheader .navbar ul {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 1rem;
+}
+#mainheader .navbar ul li {
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+#showcase .container {
+  display: block;
+}
+#showcase .container .showcase-content {
+  text-align: center;
+}
+#showcase .container .showcase-content p {
+  text-align: center;
+}
+#showcase .container .showcase-content a {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+}
+#showcase .container .showcase-content .show-cont-img {
+  text-align: center;
+  display: block;
+}
+#showcase .container .ronaldinho {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+}
+
+#about .about-row {
+  display: block;
+}
+#about .about-row img {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+#about .about-row .about-text {
+  text-align: justify;
+}
+
+#games .games-flags {
+  display: block;
+}/*# sourceMappingURL=mobile.css.map */
