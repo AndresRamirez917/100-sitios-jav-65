@@ -38,3 +38,42 @@ const btn_validar = document.getElementById('btn-validar').onclick = (e) => {
 const emailValido = (email) => {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)
 }
+
+function getData(done){
+    const result = fetch('https://randomuser.me/api?results=1');
+    const result2 = fetch('https://randomuser.me/api?results=1');
+    result
+    .then(response => response.json())
+    //const responseArr = result.results.map(elemento => Object.entries(elemento))
+    //console.log(responseArr)
+    .then(data => {
+        done(data)
+    })
+    result2
+    .then(response => response.json())
+    .then(data2 => {
+        done(data2)
+    })
+}
+
+getData(data => {
+    getData(data2 => {
+        //data = data.length = 3;
+        //data2 = data.length = 3
+        data.results.forEach(element => {
+            data2.results.forEach(element2 => {
+                //for(i = 0; i < 6; i++){
+                    const card = document.createRange().createContextualFragment(`
+                         
+                        <img src="${element.picture.large}" alt="">
+                            <h3>vs</h3>
+                        <img src="${element2.picture.large}" alt="">
+                        
+                        `)
+                        const game_flags = document.querySelector('.games-flags');
+                        game_flags.append(card)
+                //}
+            })
+        });
+    })
+})

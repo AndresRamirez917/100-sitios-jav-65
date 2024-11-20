@@ -160,6 +160,7 @@ form .button-2 {
   justify-items: center;
   justify-self: center;
   gap: 50px;
+  display: block;
 }
 #games .games-flags img {
   width: 200px;
