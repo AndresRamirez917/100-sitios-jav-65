@@ -44,8 +44,6 @@ function getData(done){
     const result2 = fetch('https://randomuser.me/api?results=1');
     result
     .then(response => response.json())
-    //const responseArr = result.results.map(elemento => Object.entries(elemento))
-    //console.log(responseArr)
     .then(data => {
         done(data)
     })
@@ -58,21 +56,18 @@ function getData(done){
 
 getData(data => {
     getData(data2 => {
-        //data = data.length = 3;
-        //data2 = data.length = 3
         data.results.forEach(element => {
             data2.results.forEach(element2 => {
-                //for(i = 0; i < 6; i++){
                     const card = document.createRange().createContextualFragment(`
-                         
+                       <div class="games-flags">
                         <img src="${element.picture.large}" alt="">
                             <h3>vs</h3>
                         <img src="${element2.picture.large}" alt="">
-                        
+                        </div> 
+                        <hr>
                         `)
-                        const game_flags = document.querySelector('.games-flags');
+                        const game_flags = document.getElementById('games');
                         game_flags.append(card)
-                //}
             })
         });
     })
