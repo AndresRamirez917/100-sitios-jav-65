@@ -47,11 +47,29 @@ function getData(done){
     .then(data => {
         done(data)
     })
+    
     result2
-    .then(response => response.json())
+    .then(response2 => response2.json())
     .then(data2 => {
         done(data2)
+    
+})
+}
+function getData(done){
+    const result = fetch('https://randomuser.me/api?results=1');
+    const result2 = fetch('https://randomuser.me/api?results=1');
+    result
+    .then(response => response.json())
+    .then(data => {
+        done(data)
     })
+    
+    result2
+    .then(response2 => response2.json())
+    .then(data2 => {
+        done(data2)
+    
+})
 }
 
 getData(data => {
@@ -59,16 +77,18 @@ getData(data => {
         data.results.forEach(element => {
             data2.results.forEach(element2 => {
                     const card = document.createRange().createContextualFragment(`
+
                        <div class="games-flags">
-                        <img src="${element.picture.large}" alt="">
-                            <h3>vs</h3>
-                        <img src="${element2.picture.large}" alt="">
-                        </div> 
+                            <img src="${element2.picture.large}" alt="">
+                                <h3>vs</h3>
+                            <img src="${element.picture.large}" alt="">
+                       </div> 
                         <hr>
+                        
                         `)
                         const game_flags = document.getElementById('games');
                         game_flags.append(card)
-            })
+            });
         });
-    })
-})
+    });
+});
